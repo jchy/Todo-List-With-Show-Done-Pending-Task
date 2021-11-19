@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+body{
+  background-color:rgb(245, 252, 116);
+  color:white ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  width:70%;
+  margin: auto;
+  background-color:rgb(212, 230, 8) ;
+  /* margin-top:100px; */
+  padding: 20px 50px 50px 50px;
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.header{
+  text-align:center;
+  font-size:30px;
+  font-weight: 900;
+}
+.header2{
+  text-align:center;
+  font-size:24px;
+  font-weight: 900;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input-btn{
+  background-color:black;
+  height:40px;
+  width:80%;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size:20px;
+  padding-left: 3%;
   color: white;
+  /* margin-right: 10px; */
 }
 
-.App-link {
-  color: #61dafb;
+.Add-btn{
+  background-color:rgb(248, 248, 248);
+  height:40px;
+  width: 16%;
+  border-radius:10px;
+  border: 1px solid black;
+  font-size:22px;
+  /* padding-left: 10px; */
+  color: black;
+  /* text-align: right; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-items{
+  /* border: 1px solid black; */
+  width:90%;
+  /* text-align: center; */
+  /* margin-left:4%; */
+  margin-top: 10px;
+  height:40px;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+  /* background-color:red; */
+  width:360px;
 }
+
+.items{
+  /* background-color:red; */
+  height:34px;
+  /* padding: 5px; */
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.task{
+  padding: 6px;
+  background-color:rgb(57, 2, 50);
+  color: white;
+  height:32px;
+  border: 1px solid black;
+}
+
+#task{
+  width:50px;
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.delete-btn{
+  background-color: black;
+  color: white;
+  font-size:12px;
+  height: 32px;
+  width:32px;
+  border-radius: 50%;
+  margin-left: 5px;
+  font-size:18px;
+  font-weight:700;
+}
+.toggle-btn{
+  /* background-color:white; */
+  background-color:black;
+  color: white;
+  height:32px;
+  font-size:16px;
+  margin-left: 5px;
+  width:70px;
+}
+.i-num{
+  height:32px;
+  /* background-color:black; */
+  /* color: white ; */
+  margin-right: 5px;
+  padding:4px;
+  border-radius:5px;
+  /* margin-left: 5px; */
+  /* border: 1px solid black; */
+}
+#status{
+  margin-left: 5px;
+  background-color:rgb(0, 20, 85);
+}
+.description{
+  background-color:black;
+  padding: 10px;
+  padding-left:20px;
+  margin-right: 20%;
+  margin-left:20px;
+  /* width:50%; */
+  width:330px;
+  border-radius: 10px;
+  height: 30px;
+  color:white;
+  /* overflow-x: scroll; */
+  overflow-y: scroll;
+}
+.description-box{
+  font-size:14px;
+  width:94%;
+  border-radius: 10px;
+  padding:10px;
+  margin:auto;
+  /* padding: auto; */
+  margin-top: 10px;
+}
+.task-container{
+ border: 1px solid black;
+ padding-bottom: 20px;
+ margin-top:10px;
+ border-radius: 30px;
+ background-color:white;
+ /* width:80%; */
+}
+.task-parent-div{
+  border: .1px solid black;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  width:400px;
+  margin: auto;
+  margin-top: 10px;
+  background-color:rgb(255, 231, 51);
+ }
+
+ .toggle-completed-task{
+   background-color: white;
+   /* color:white; */
+   border: 1px solid black;
+   border-radius: 5px;
+   height:30px;
+   font-size: 16px;
+   margin: 20px;
+   margin-left: 20px;
+   width: 160px;
+   /* color:black; */
+ }
+
+ .toggle-pending-task{
+   background-color:white;
+   /* color:white; */
+   border: 1px solid black;
+   border-radius: 5px;
+   height:30px;
+   font-size: 16px;
+   margin: 20px;
+   margin-left: 10px;
+   width:160px;
+ }
+ .input-add-btn{
+   background-color:black;
+   border-radius: 10px;
+ }
+ .pagination{
+   width: 320px;
+   margin: auto;
+ }
+ .pagination-btn{
+   height:40px;
+   width:40px;
+ }
+ .task-show-btn{
+  width:400px;
+  margin: auto;
+ }
+ .desciption-div{
+   width:80%;
+   margin: auto;
+ }
+ 

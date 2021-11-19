@@ -11,7 +11,8 @@ const Todo = () => {
   const [showPending, setShowPending] = useState(true);
 
   const [page, setPage] = useState(1);
-  const perPage = 3;
+  const perPage = 5;
+  var totalPage = Math.ceil(list.length/perPage);
 
   const changePageTo = (num) => {
     if (num <= 1) {
@@ -26,7 +27,7 @@ const Todo = () => {
       id: uuid(),
       title,
       description,
-      status: true,
+      status: false,
     };
     setList([...list, payload]);
   };
@@ -44,31 +45,37 @@ const Todo = () => {
     setList(updatedList);
   };
 
+  const handleDelete = (id)=>{
+    setList(
+        list.filter(item => item.id !==id)
+    )
+}
+
   return (
     <div>
      
       <TodoInput onSubmit={handleSubmit} />
       
-      <TodoList data={filteredResults} handleToggle={handleToggle} />
+      <TodoList data={filteredResults} handleToggle={handleToggle}  handleDelete={handleDelete} />
       
-     
-        <button onClick={() => setShowCompleted(!showCompleted)}>
-          Toggle Completed Tasks
+     <div className="task-show-btn">
+        <button onClick={() => setShowCompleted(!showCompleted)} className="toggle-completed-task">
+          Completed Tasks
         </button>
 
      
-        <button onClick={() => setShowPending(!showPending)}>
-          Toggle Pending Tasks
+        <button onClick={() => setShowPending(!showPending)} className="toggle-pending-task">
+          Pending Tasks
         </button>
 
       {showCompleted && <TodoList handleToggle={handleToggle}  data={list.filter((item) => item.status)} />}
       {showPending && <TodoList handleToggle={handleToggle}  data={list.filter((item) => !item.status)} />}
-      
-      <div>
+      </div>
+      <div className="pagination">
         <Pagination
           currentPage={page}
           onClickCallback={(page) => changePageTo(page)}
-          total={5}
+          total={totalPage}
         />
       </div>
     </div>

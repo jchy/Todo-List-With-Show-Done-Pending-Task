@@ -3,13 +3,13 @@ import React, { useState } from "react";
 function TodoInput({ onSubmit }) {
   const [state, setState] = useState({
     title: "",
-    description: ""
+    description: "",
   });
 
   const handleInputChange = (e) => {
     setState({
       ...state,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
   const onFormSubmit = (e) => {
@@ -18,23 +18,26 @@ function TodoInput({ onSubmit }) {
   };
   return (
     <form onSubmit={(e) => onFormSubmit(e)}>
-      <div style={{ padding: 4 }}>
+      <div className="input-add-btn">
         <input
-          placeholder="title"
+          placeholder="Add Something..."
           name="title"
           value={state.title}
           onChange={handleInputChange}
-        />
+          className="input-btn"
+        /> 
+        <input type="submit" value="+" className="Add-btn"/>
+
       </div>
-      <div style={{ padding: 4 }}>
-        <input
-          placeholder="description"
+      <div className="desciption-div">
+        <textarea
+          placeholder="Description.."
           name="description"
           value={state.description}
           onChange={handleInputChange}
+          className="description-box"
         />
       </div>
-      <input type="submit" value="ADD" />
     </form>
   );
 }
